@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Web SALUD</title>
+    <link rel="icon" href="data:; base64, iVBORw0KGgo =" />
+
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsee.css">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="../css/template-style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/modernizr.js"></script>
+    <script type="text/javascript" src="../js/responsee.js"></script>
+    <script type="text/javascript" src="../js/template-scripts.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/MasterAdmin.js"></script>
+    <!--FIRESTORE-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+
+</head>
+
+<body class="size-1140">
+    
+    <!-- TOP NAV WITH LOGO -->
+    <div id="Menu"></div>
+    <section>
+        <!-- SOBRE NOSOTROS -->
+        <div id="our-work">
+            <div class="line">
+                <h2 class="section-title">USUARIOS</h2>
+                <div class="row" style="background: #f4f4f4;">
+                    <div class="col-md-12 col-lg-12">
+                        <br>
+                        <!-- <form id="FormRegister" class="" method="post" autocomplete="off"> -->
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-hashtag" style="color: #4a1162; width: 15px;"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                        <input type="number" id="txtNumDoc" class="form-control input-md"
+                                            placeholder="Número de Documento" required>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user" style="color: #4a1162; width: 15px;"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                        <input type="text" id="txtNombres" maxlength="100" class="form-control input-md" 
+                                            placeholder="Nombres" required>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar-alt" style="color: #4a1162; width: 15px;"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                        <input type="date" id="txtFecNac" placeholder="Fecha Nacimiento"
+                                            class="form-control input-md" maxlength="10">
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-mobile-alt" style="color: #4a1162; width: 15px;"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                        <input type="number" id="txtTel" maxlength="9" class="form-control input-md"
+                                            placeholder="Número de Celular" required>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-venus-mars" style="color: #4a1162; width: 15px;"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                        <div class="form-control input-md">
+                                            <label class="radio-inline">
+                                                <input type="radio" id="sex1" class="radio" name="inlineRadioOptions"
+                                                    value="M">
+                                                Masculino
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" id="sex2" class="radio" name="inlineRadioOptions" 
+                                                    value="F">
+                                                Femenino
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-at" style="color: #4a1162;" aria-hidden="true"></i>
+                                        </div>
+                                        <input type="text" id="txtCorreo" class="form-control input-md"
+                                            placeholder="Correo Electrónico" required>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-at" style="color: #4a1162;" aria-hidden="true"></i>
+                                        </div>
+                                        <select id="sTEmpleado" name="sTEmpleado" class="form-control">
+                                            <option value="ENFERMERA">ENFERMERA</option>
+                                            <option value="DOCTOR">DOCTOR</option>
+                                            <option value="ADMINISTRADOR">Administrador</option>
+                                          </select>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <input type="button" id="btnRegistrar" class="btn btn-primary" value="REGISTRAR" />
+                                    <button id="btnModificar" class="btn btn-primary" style="display: none;" >Modificar</button>
+                                </div>
+                            </div>
+                        <!-- </form> -->
+
+                    </div>
+
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12" style="margin-top: 15px;">
+                        <table class="table">
+                            <thead>
+                                   <tr>
+                                       <th>DOCU</th>                                    
+                                       <th>EMAIL</th>                                    
+                                       <th>FECNAC</th>                                    
+                                       <th>NCELULAR</th>                                    
+                                       <th>NOMBRES</th>                                    
+                                       <th>SEXO</th>                                    
+                                       <th>EMPLEADO</th>                                 
+                                       <th>Eliminar</th>                                 
+                                       <th>Editar</th>                                 
+                                    </tr>
+                            </thead>
+                            <tbody id="tabla">                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <div id="Footer"></div>
+</body>
+<script src="js/CrearCuenta.js"></script>
+</html>

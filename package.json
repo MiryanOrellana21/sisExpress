@@ -1,0 +1,14 @@
+{
+  "name": "integrador-sis",
+  "version": "1.0.0",
+  "description": "integrador-sis",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Grupo 9",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

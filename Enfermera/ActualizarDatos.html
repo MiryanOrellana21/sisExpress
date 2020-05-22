@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Web SALUD</title>
+    <link rel="icon" href="data:; base64, iVBORw0KGgo =" />
+
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsee.css">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="../css/template-style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/modernizr.js"></script>
+    <script type="text/javascript" src="../js/responsee.js"></script>
+    <script type="text/javascript" src="../js/template-scripts.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/MasterEnfermera.js"></script>
+    <!--FIRESTORE-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+
+</head>
+
+<body class="size-1140">
+    <!-- TOP NAV WITH LOGO -->
+    <div id="Menu"></div>
+    <section>
+        <!-- SOBRE NOSOTROS -->
+        <div id="our-work">
+            <div class="line">
+                <h2 class="section-title">ACTUALIZAR DATOS</h2>
+                <div class="row" style="background: #f4f4f4;">
+                    <div class="col-md-12 col-lg-12">
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        DNI
+                                    </div>
+                                    <input type="number" id="txtNumDoc" class="form-control input-md"
+                                        placeholder="Número de Documento" required>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <input type="button" id="btnBuscar" class="btn btn-primary" value="Buscar" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12" style="margin-top: 15px;">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>DNI</th>
+                                    <th>ESPECIALIDAD</th>
+                                    <th>FECHA</th>
+                                    <th>HORA</th>
+                                    <th>ESTADO</th>
+                                    <th>Ver Detalle</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Detalle de la Cita</h4>
+                </div>
+                <div class="modal-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>DESCRIPCIÓN</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaModal">
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <div id="Footer"></div>
+</body>
+<script src="js/ActualizarDatos.js"></script>
+
+</html>

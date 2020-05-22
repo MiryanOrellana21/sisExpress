@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Web SALUD</title>
+    <link rel="icon" href="data:; base64, iVBORw0KGgo =" />
+
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsee.css">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="../css/template-style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/modernizr.js"></script>
+    <script type="text/javascript" src="../js/responsee.js"></script>
+    <script type="text/javascript" src="../js/template-scripts.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/MasterAdmin.js"></script>
+    <!--FIRESTORE-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+
+</head>
+
+<body class="size-1140">
+    
+    <!-- TOP NAV WITH LOGO -->
+    <div id="Menu"></div>
+    <section>
+        <!-- SOBRE NOSOTROS -->
+        <div id="our-work">
+            <div class="line">
+                <h2 class="section-title">ESPECIALIDAD</h2>
+                <div class="row" style="background: #f4f4f4;">
+                    <div class="col-md-12 col-lg-12">
+                        <br>
+                        <!-- <form id="FormRegister" class="" method="post" autocomplete="off"> -->
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-hashtag" style="color: #4a1162; width: 15px;"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                        <input type="number" id="txtCodEspe" class="form-control input-md"
+                                            placeholder="CODIGO ESPECIALIDAD" required>
+                                    </div>
+                                    <br>
+                                </div>
+                               
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar-alt" style="color: #4a1162; width: 15px;"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                        <input type="text" id="txtDesEspe" placeholder="ESPECIALIDAD"
+                                            class="form-control input-md" maxlength="50">
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="col-sm-12 col-md-12 text-center">
+                                    <input type="button" id="btnRegistrar" class="btn btn-primary" value="REGISTRAR" />
+                                    <button id="btnModificar" class="btn btn-primary" style="display: none;" >Modificar</button>
+                                </div>
+                            </div>
+                    </div>
+
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12" style="margin-top: 15px;">
+                        <table class="table">
+                            <thead>
+                                   <tr>
+                                       <th>ID</th>                                    
+                                       <th>CÓDIGO</th>                                    
+                                       <th>ESPECIALIDAD</th>                                 
+                                       <th>Eliminar</th>                                 
+                                       <th>Editar</th>                                 
+                                    </tr>
+                            </thead>
+                            <tbody id="tabla">                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <div id="Footer"></div>
+</body>
+<script src="js/CrearEspecialidad.js"></script>
+</html>
